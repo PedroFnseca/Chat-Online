@@ -1,9 +1,10 @@
 # Chat via terminal 💻
-### Para comunicações em grupo ou não via terminal!
+### A ideia desse projeto surgiu quando eu asisti alguns documentários e séries sobre tecnologia, ao ver os personagens se comunicando através do terminal nativo do computador com outras pessoas me deixou bastante curioso sobre o funcionamento. Depois de algumas pesquisas eu descobri como fazer o meu própio e dei início ao projeto ```Nuntius WebSocket``` do latim, o mensageiro. 
+### O projeto irá funcionar da seguinte forma: O usuário irá iniciar o scrpit, colocar o seu username (Somente para ser identificado dentro do chat), e digitar em qual canal de comunicação ele irá se conectar. Sendo simples a sua utilização.
 
 <br>
 
-## O que é WebSocket? 
+# O que é WebSocket? 
 
 ### É uma tecnlogia que permite comunicações bidirecionais através de canais full-duplex que permitem o envio e recebimento de dados.  
 
