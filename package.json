@@ -1,0 +1,12 @@
+{
+  "name": "Nuntius-WebSocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pedroFnseca/Nuntius-WebSocket.git",
+  "author": "pedrofnseca <pedropereira.pp264@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.2"
+  }
+}
