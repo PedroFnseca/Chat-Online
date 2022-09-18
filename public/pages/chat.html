@@ -27,7 +27,7 @@
         window.location.href = '/'
       }
 
-      form.addEventListener('submit', function (e) {
+      form.addEventListener('submit', (e) =>{
         e.preventDefault();
         if (input.value) {
 
@@ -41,11 +41,21 @@
         }
       })
 
-      socket.on('chatMessage', function (message) {
+      socket.on('chatMessage', (message) => {
         var li = document.createElement('li')
         li.classList.add('message')
         li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span>`
         messagesContainer.appendChild(li)
+      })
+
+      socket.on('userConnected', (messages) =>{
+        messagesContainer.innerHTML = ''
+        messages.forEach(message => {
+          var li = document.createElement('li')
+          li.classList.add('message')
+          li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span>`
+          messagesContainer.appendChild(li)
+        })
       })
 
     </script>

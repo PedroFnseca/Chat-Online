@@ -17,13 +17,18 @@ app.set('views', path.join(__dirname, './public')) // set views directory
 
 app.use('/', routes) // use routes
 
+const messages = [] // array to store messages
+
 io.on('connection', (socket) =>{
     console.log('a user connected: ' + socket.id) // log when user connects
+
+    socket.emit('userConnected', messages) // send previous messages to user
 
     // send message to all users
     socket.on('chatMessage', data => {
         console.log(data.username + ': ' + data.message) // log message
         io.emit('chatMessage', data)
+        messages.push(data) // add message to array
     })
 
     socket.on('disconnect', () => { 
