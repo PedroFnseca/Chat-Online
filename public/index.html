@@ -10,7 +10,7 @@
 <body>
 
     <div class="index-container">
-        
+
         <div id="message-container">
             <h1>Nuntius</h1>
             <p>Chat online</p>
@@ -24,9 +24,9 @@
         </div>
     </div>
 
-    <footer>
+    <!-- <footer>
         <p>Feito por <a href="https://github.com/pedroFnseca" target="blank">@Pedrofnseca</a>
-    </footer>
+    </footer> -->
 
     <script>
         const usernameInput = document.getElementById('username-input')
@@ -38,6 +38,7 @@
             if (usernameInput.value) {
                 localStorage.setItem('username', usernameInput.value)
                 alert('Usuário salvo com sucesso!')
+                window.location.href = '/pages/chat.html'
             } else{
                 alert('Digite um nome de usuário!')
             }
