@@ -10,23 +10,24 @@
 <body>
 
     <div class="index-container">
-
+        
         <div id="message-container">
             <h1>Nuntius</h1>
             <p>Chat online</p>
         </div>
 
-        <div id="form-container">
-            <form action="/pages/chat.html">
-                <input type="text" name="username" id="username-input" placeholder="Digite seu nome">
+        <div>
+            <form action="/pages/chat.html" id="form-container">
+                <input 
+                type="text" 
+                name="username" 
+                id="username-input" 
+                placeholder="Digite seu nome"
+                autocomplete="off">
                 <button type="submit" id="ok-btn">OK</button>
             </form>
         </div>
     </div>
-
-    <!-- <footer>
-        <p>Feito por <a href="https://github.com/pedroFnseca" target="blank">@Pedrofnseca</a>
-    </footer> -->
 
     <script>
         const usernameInput = document.getElementById('username-input')
@@ -37,8 +38,7 @@
             e.preventDefault();
             if (usernameInput.value) {
                 localStorage.setItem('username', usernameInput.value)
-                alert('Usuário salvo com sucesso!')
-                window.location.href = '/pages/chat.html'
+                window.location.href = '/chat'
             } else{
                 alert('Digite um nome de usuário!')
             }

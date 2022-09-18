@@ -4,6 +4,62 @@ body{
     background-color: #B0E0E6;
 }
 
-#messages-container{
+.message-username{
+    font: 500 1.2rem Roboto;
+    text-align: center;
+}
+
+.message-content{
+    font: 1rem Roboto;
+}
+
+ul{
     list-style: none;
+    background-color: rgba(0, 0, 0, 0.381);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+li{
+    margin: 0.5rem;
+}
+
+#form-message{
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.192);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2vh;
+    align-content: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    margin: 0 auto;
+}
+
+#form-message input{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 80%;
+}
+
+#form-message button{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #00BFFF;
+    color: white;
+    font: 500 1rem Roboto;
+    transition: all 0.2s;
+}
+
+#form-message button:hover{
+    background-color: #007fa9;
+    color: white;
+    font: 500 1rem Roboto;
+    transition: all 0.2s;
 }

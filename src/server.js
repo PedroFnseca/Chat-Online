@@ -21,9 +21,9 @@ io.on('connection', (socket) =>{
     console.log('a user connected: ' + socket.id) // log when user connects
 
     // send message to all users
-    socket.on('chatMessage', (msg) => {
-        console.log('message: ' + msg)
-        io.emit('chatMessage', msg)
+    socket.on('chatMessage', data => {
+        console.log(data.username + ': ' + data.message) // log message
+        io.emit('chatMessage', data)
     })
 
     socket.on('disconnect', () => { 

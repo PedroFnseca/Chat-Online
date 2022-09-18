@@ -15,33 +15,37 @@
 }
 
 #form-container{
+    background-color: #29292e;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2vh;
     align-content: center;
-    text-align: center;
-    align-items: center;
+    justify-content: space-between;
     padding: 1rem;
 }
 
 #username-input{
-    width: 50%;
-    height: 3rem;
+    width: 65%;
+    height: 2.8rem;
     border-radius: 0.5rem;
     border: 0;
     padding: 0 1.5rem;
     background-color: #fff;
     color: #29292e;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin: auto;
 }
 
 #ok-btn{
     background-color: #835afd;
     color: #fff;
     border: 0;
-    padding: 0 1.3rem;
+    padding: 0 2rem;
     height: 3rem;
     border-radius: 20px;
-    font-size: .8rem;
-    text-transform: uppercase;
+    margin: auto;
 }
 
 #ok-btn:hover{
@@ -61,4 +65,32 @@ footer{
     color: #fff;
     text-align: center;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 767px) {
+    #username-input{
+        font-size: 0.8rem;
+    }
+
+    #ok-btn{
+        padding: 0 1rem;
+    }
+
+    #username-input{
+        height: 2rem;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    #username-input{
+        font-size: 0.6rem;
+    }
+
+    #ok-btn{
+        padding: 0 0.5rem;
+    }
+
+    #username-input{
+        height: 2rem;
+    }
 }

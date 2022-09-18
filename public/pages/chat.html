@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="../styles/chat.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.map"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
   </head>
   <body>
-    <ul id="messages-container"></ul>
+    <ul id="messages-container">
+      <li class="message">
+        <span class="message-username">Username</span>
+        <span class="message-content">Message</span>
+      </li>
+    </ul>
 
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
+    <form id="form-message" action="">
+      <input id="message-input" autocomplete="off" />
+      <button id="btn-send" type="submit">Send</button>
     </form>
 
     <script>
-      var socket = io()
+      var socket = io();
 
-      var form = document.getElementById('form');
-      var input = document.getElementById('input');
+      var form = document.getElementById('form-message')
+      var input = document.getElementById('message-input')
+      var messagesContainer = document.getElementById('messages-container')
+      var userName = localStorage.getItem('username')
 
-      form.addEventListener('submit', function(e) {
+      if (!userName){
+        window.location.href = '/'
+      }
+
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (input.value) {
-          socket.emit('chatMessage', input.value);
+
+          data = {
+            username: userName,
+            message: input.value
+          }
+
+          socket.emit('chatMessage', data)
           input.value = '';
         }
       })
 
-      socket.on('chatMessage', function(msg) {
-        var item = document.createElement('li');
-        item.textContent = msg;
-        messages.appendChild(item);
-        window.scrollTo(0, document.body.scrollHeight);
+      socket.on('chatMessage', function (message) {
+        var li = document.createElement('li')
+        li.classList.add('message')
+        li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span>`
+        messagesContainer.appendChild(li)
       })
+
     </script>
   </body>
 </html>
