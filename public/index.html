@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Socket.IO chat</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.map"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
-  </head>
-  <body>
-    <ul id="messages"></ul>
+    <div class="index-container">
+        
+        <div id="message-container">
+            <h1>Nuntius</h1>
+            <p>Chat online</p>
+        </div>
 
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-    </form>
+        <div id="form-container">
+            <form action="/pages/chat.html">
+                <input type="text" name="username" id="username-input" placeholder="Digite seu nome">
+                <button type="submit" id="ok-btn">OK</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Feito por <a href="https://github.com/pedroFnseca" target="blank">@Pedrofnseca</a>
+    </footer>
 
     <script>
-      var socket = io()
+        const usernameInput = document.getElementById('username-input')
+        const form = document.querySelector('form')
+        const okBtn = document.getElementById('ok-btn')
 
-      var form = document.getElementById('form');
-      var input = document.getElementById('input');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (usernameInput.value) {
+                localStorage.setItem('username', usernameInput.value)
+                alert('Usuário salvo com sucesso!')
+            } else{
+                alert('Digite um nome de usuário!')
+            }
+        })
 
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (input.value) {
-          socket.emit('chatMessage', input.value);
-          input.value = '';
+        function keyUpHandler(e) {
+            if (e.key === 'Enter') {
+                okBtn.click();
+            }
         }
-      })
 
-      socket.on('chatMessage', function(msg) {
-        var item = document.createElement('li');
-        item.textContent = msg;
-        messages.appendChild(item);
-        window.scrollTo(0, document.body.scrollHeight);
-      })
     </script>
-  </body>
+</body>
 </html>

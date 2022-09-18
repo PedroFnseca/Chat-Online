@@ -3,6 +3,7 @@ import path from 'path'
 import http from 'http'
 import { Server } from 'socket.io'
 import { config } from 'dotenv'
+import routes from './routes.js'
 
 config() // load .env file
 const app = express() // create express app
@@ -14,9 +15,7 @@ const PORT = process.env.PORT || 3333 // get port from .env file or use 3000
 app.use(express.static(path.join(__dirname, './public'))) // serve static files
 app.set('views', path.join(__dirname, './public')) // set views directory
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-});
+app.use('/', routes) // use routes
 
 io.on('connection', (socket) =>{
     console.log('a user connected: ' + socket.id) // log when user connects
