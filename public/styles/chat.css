@@ -22,6 +22,7 @@ ul{
 
 li{
     margin: 0.5rem;
+    word-wrap: break-word;
 }
 
 #form-message{
