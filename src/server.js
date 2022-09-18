@@ -20,12 +20,11 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) =>{
     console.log('a user connected: ' + socket.id) // log when user connects
-    socket.broadcast.emit('hi'); // send message to all users except sender
 
     // send message to all users
     socket.on('chatMessage', (msg) => {
-        console.log('message: ' + msg);
-        io.emit('chat message', msg);
+        console.log('message: ' + msg)
+        io.emit('chatMessage', msg)
     })
 
     socket.on('disconnect', () => { 
