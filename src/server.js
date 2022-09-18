@@ -9,6 +9,7 @@ const app = express() // create express app
 const server = http.createServer(app) // create http server
 const __dirname = path.resolve() // get current directory
 const io = new Server(server) // create socket.io server
+const PORT = process.env.PORT || 3333 // get port from .env file or use 3000
 
 app.use(express.static(path.join(__dirname, './public'))) // serve static files
 app.set('views', path.join(__dirname, './public')) // set views directory
@@ -32,6 +33,6 @@ io.on('connection', (socket) =>{
     })
 })
 
-server.listen(3333, () => {
+server.listen(PORT, () => {
     console.log('\nServer is running on port 3333\n')
 })
