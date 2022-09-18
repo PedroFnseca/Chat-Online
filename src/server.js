@@ -1,18 +1,37 @@
 import express from 'express'
-import ejs from 'ejs'
-import {Socket} from 'socket.io'
+import path from 'path'
+import http from 'http'
+import { Server } from 'socket.io'
+import { config } from 'dotenv'
 
-const app = express()
+config() // load .env file
+const app = express() // create express app
+const server = http.createServer(app) // create http server
+const __dirname = path.resolve() // get current directory
+const io = new Server(server) // create socket.io server
 
+app.use(express.static(path.join(__dirname, './public'))) // serve static files
+app.set('views', path.join(__dirname, './public')) // set views directory
 
 app.get('/', (req, res) => {
-    res.send('<h1>Tá funfando</h1>')
-})
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000')
-})
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/index.html')
 });
+
+io.on('connection', (socket) =>{
+    console.log('a user connected: ' + socket.id) // log when user connects
+    socket.broadcast.emit('hi'); // send message to all users except sender
+
+    // send message to all users
+    socket.on('chatMessage', (msg) => {
+        console.log('message: ' + msg);
+        io.emit('chat message', msg);
+    })
+
+    socket.on('disconnect', () => { 
+        console.log('user disconnected: ' + socket.id)
+    })
+})
+
+server.listen(3333, () => {
+    console.log('\nServer is running on port 3333\n')
+})
