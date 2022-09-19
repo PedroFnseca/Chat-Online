@@ -98,3 +98,27 @@ li{
 img{
     width: 20%;
 }
+
+@media screen and (max-width: 600px){
+    #form-message{
+        width: 100%;
+    }
+
+    #form-message input{
+        width: 100%;
+    }
+
+    #form-message button{
+        width: 100%;
+    }
+
+    .scrollBar{
+        height: 70vh;
+    }
+}
+    
+@media screen and (max-width: 400px){
+    #form-message{
+        width: 100%;
+    }
+}
