@@ -85,6 +85,16 @@ li{
 }
 
 .scrollBar::-webkit-scrollbar-thumb{
-    background-color: #000000a7;
+    background-color: #00000067;
     border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.scrollBar::-webkit-scrollbar-thumb:hover{
+    background-color: #000000;
+    transition: all 0.5s;
+}
+
+img{
+    width: 20%;
 }
