@@ -12,3 +12,5 @@
 ### Para o projeto ser realizado, foi utilizado a API [socket.io](https://socket.io/)
 
 <!-- Imagem websocket --->
+
+<!-- Funcionalidades do projeto -->
