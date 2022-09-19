@@ -15,6 +15,9 @@ body{
 
 ul{
     list-style: none;
+    background-image: linear-gradient(to right, #001b44, #005187 80%);
+    border-radius: 5px;
+    padding: 0.5rem;
 }
 
 li{
@@ -24,19 +27,18 @@ li{
 
 #form-message{
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.192);
+    background-image: linear-gradient(to right, #001b44, #005187, #a8eb12);
     border-radius: 0.5rem;
     padding: 0.5rem;
 
     display: flex;
     flex-wrap: wrap;
-    row-gap: 2vh;
+    row-gap: 1vh;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
 
     margin: 0 auto;
-    margin-top: 10px;
 }
 
 #form-message input{
@@ -48,40 +50,25 @@ li{
 
 #form-message button{
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     padding: 0.5rem;
     background-color: #000000;
-    color: white;
+    color: #a8eb12;
     font: 500 1rem Roboto;
     transition: all 0.2s;
+    max-width: 10%;
+    min-width: 100px;
+}
+
+@media screen and (max-width: 1023px){
+    #form-message button{
+        min-width: 150px;
+    }
 }
 
 #form-message button:hover{
-    background-color: #00000077;
+    filter: invert(1);
     color: white;
     font: 500 1rem Roboto;
     transition: all 0.2s;
-}
-
-.scrollBar{
-    background-color: rgba(0, 0, 0, 0.381);
-    border-radius: 10px;
-    padding: 0.5rem;
-    overflow-y: scroll;
-    height: 80vh;
-    margin: 0 auto;
-}
-
-.scrollBar::-webkit-scrollbar{
-    width: .8rem;
-}
-
-.scrollBar::-webkit-scrollbar-track{
-    background-color: rgba(0, 0, 0, 0.371);
-    border-radius: 10px;
-}
-
-.scrollBar::-webkit-scrollbar-thumb{
-    background-color: #000000a7;
-    border-radius: 10px;
 }
