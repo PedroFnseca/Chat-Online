@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
-    background-color: #B0E0E6;
+    background-color: #719ca2;
 }
 
 .message-username{
     font: 500 1.2rem Roboto;
+    color: rgb(194, 194, 194);
     text-align: center;
+
 }
 
 .message-content{
-    font: 1rem Roboto;
+    font: 400 1rem Roboto;
+    font-weight: 500;
 }
 
 ul{
     list-style: none;
-    background-image: linear-gradient(to right, #001b44, #005187 80%);
-    border-radius: 5px;
-    padding: 0.5rem;
 }
 
 li{
@@ -27,18 +27,19 @@ li{
 
 #form-message{
     width: 80%;
-    background-image: linear-gradient(to right, #001b44, #005187, #a8eb12);
+    background-color: rgba(0, 0, 0, 0.192);
     border-radius: 0.5rem;
     padding: 0.5rem;
 
     display: flex;
     flex-wrap: wrap;
-    row-gap: 1vh;
+    row-gap: 2vh;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
 
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 #form-message input{
@@ -50,25 +51,40 @@ li{
 
 #form-message button{
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     padding: 0.5rem;
     background-color: #000000;
-    color: #a8eb12;
-    font: 500 1rem Roboto;
-    transition: all 0.2s;
-    max-width: 10%;
-    min-width: 100px;
-}
-
-@media screen and (max-width: 1023px){
-    #form-message button{
-        min-width: 150px;
-    }
-}
-
-#form-message button:hover{
-    filter: invert(1);
     color: white;
     font: 500 1rem Roboto;
     transition: all 0.2s;
+}
+
+#form-message button:hover{
+    background-color: #00000077;
+    color: white;
+    font: 500 1rem Roboto;
+    transition: all 0.2s;
+}
+
+.scrollBar{
+    background-color: rgba(0, 0, 0, 0.381);
+    border-radius: 10px;
+    padding: 0.5rem;
+    overflow-y: scroll;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.scrollBar::-webkit-scrollbar{
+    width: .8rem;
+}
+
+.scrollBar::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.371);
+    border-radius: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb{
+    background-color: #000000a7;
+    border-radius: 10px;
 }
