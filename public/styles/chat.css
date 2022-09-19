@@ -26,27 +26,25 @@ li{
 }
 
 #form-message{
-    width: 80%;
     background-color: rgba(0, 0, 0, 0.192);
     border-radius: 0.5rem;
     padding: 0.5rem;
-
     display: flex;
     flex-wrap: wrap;
     row-gap: 2vh;
     align-content: center;
     justify-content: space-between;
-    padding: 1rem;
-
+    padding: .8rem;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 #form-message input{
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    width: 80%;
+    width: 85%;
+    font: 400 1.2rem Roboto;
 }
 
 #form-message button{
@@ -54,15 +52,14 @@ li{
     border-radius: 0.5rem;
     padding: 0.5rem;
     background-color: #000000;
-    color: white;
     font: 500 1rem Roboto;
+    color: #fff;
+    font-size: 20px;
     transition: all 0.2s;
 }
 
 #form-message button:hover{
     background-color: #00000077;
-    color: white;
-    font: 500 1rem Roboto;
     transition: all 0.2s;
 }
 
@@ -97,28 +94,4 @@ li{
 
 img{
     width: 20%;
-}
-
-@media screen and (max-width: 600px){
-    #form-message{
-        width: 100%;
-    }
-
-    #form-message input{
-        width: 100%;
-    }
-
-    #form-message button{
-        width: 100%;
-    }
-
-    .scrollBar{
-        height: 70vh;
-    }
-}
-    
-@media screen and (max-width: 400px){
-    #form-message{
-        width: 100%;
-    }
 }
