@@ -15,9 +15,6 @@ body{
 
 ul{
     list-style: none;
-    background-color: rgba(0, 0, 0, 0.381);
-    border-radius: 10px;
-    padding: 0.5rem;
 }
 
 li{
@@ -39,6 +36,7 @@ li{
     padding: 1rem;
 
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 #form-message input{
@@ -52,15 +50,38 @@ li{
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    background-color: #00BFFF;
+    background-color: #000000;
     color: white;
     font: 500 1rem Roboto;
     transition: all 0.2s;
 }
 
 #form-message button:hover{
-    background-color: #007fa9;
+    background-color: #00000077;
     color: white;
     font: 500 1rem Roboto;
     transition: all 0.2s;
+}
+
+.scrollBar{
+    background-color: rgba(0, 0, 0, 0.381);
+    border-radius: 10px;
+    padding: 0.5rem;
+    overflow-y: scroll;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.scrollBar::-webkit-scrollbar{
+    width: .8rem;
+}
+
+.scrollBar::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.371);
+    border-radius: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb{
+    background-color: #000000a7;
+    border-radius: 10px;
 }
