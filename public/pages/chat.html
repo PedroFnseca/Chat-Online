@@ -34,9 +34,19 @@
         e.preventDefault();
         if (input.value) {
 
+          const date = new Date()
+          var minutes = date.getMinutes()
+          var hours = date.getHours()
+          
+          if (minutes.toString().length == 1){
+            minutes = `0${minutes}`
+          }
+          const time = `${hours}:${minutes}` 
+
           data = {
             username: userName,
-            message: input.value
+            message: input.value,
+            time: time
           }
 
           socket.emit('chatMessage', data)
@@ -47,7 +57,7 @@
       socket.on('chatMessage', (message) => {
         var li = document.createElement('li')
         li.classList.add('message')
-        li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span>`
+        li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span>`
         messagesContainer.appendChild(li)
 
         scroll.scrollTop = scroll.scrollHeight
@@ -58,7 +68,7 @@
         messages.forEach(message => {
           var li = document.createElement('li')
           li.classList.add('message')
-          li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span>`
+          li.innerHTML = `<span class="message-username">${message.username}: </span> <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span>`
           messagesContainer.appendChild(li)
         })
 

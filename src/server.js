@@ -26,7 +26,6 @@ io.on('connection', (socket) =>{
 
     // send message to all users
     socket.on('chatMessage', data => {
-        console.log(data.username + ': ' + data.message) // log message
         io.emit('chatMessage', data)
         messages.push(data) // add message to array
     })

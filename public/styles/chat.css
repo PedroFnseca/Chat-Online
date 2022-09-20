@@ -5,15 +5,20 @@ body{
 }
 
 .message-username{
-    font: 500 2rem Roboto;
-    color: #ffffff;
+    font: 800 2rem Roboto;
+    color: #f04608;
     text-align: center;
 }
 
 .message-content{
-    font: 400 1.5rem Roboto;
+    font: 600 1.5rem Roboto;
     font-weight: 500;
-    color: #00aaff;
+    color: #ffff;
+}
+
+.message-time{
+    color: #00aaff9c;
+    font: 600 1rem Roboto;
 }
 
 ul{
@@ -104,26 +109,4 @@ li{
 
 img{
     width: 20%;
-}
-
-@media screen and (max-width: 767px) {
-
-    .message-content{
-        font-size: 8rem;
-    }
-
-    .message-username{
-        font-size: 8.5rem;
-    }
-}
-
-@media screen and (max-width: 374px) {
-
-    .message-content{
-        font-size: 10rem;
-    }
-
-    .message-username{
-        font-size: 9.5rem;
-    }
 }
