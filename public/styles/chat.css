@@ -17,6 +17,8 @@ body{
     min-width: 10%;
     max-width: 60%;
     word-wrap: break-word;
+
+    animation: aparecer .5s;
 }
 
 .message-username{
@@ -125,6 +127,16 @@ li{
     transition: all 0.5s;
 }
 
-img{
-    width: 20%;
+.mensagem img{
+    width: 22rem;
+}
+
+/* faz a mensagem aparecer lentamente */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
