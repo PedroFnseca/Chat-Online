@@ -90,7 +90,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 374px) {
+/* @media screen and (max-width: 374px) {
 
     #form-container{
         padding: .5rem;
@@ -109,4 +109,4 @@ footer{
     #username-input{
         height: 1.8rem;
     }
-}
+} */
