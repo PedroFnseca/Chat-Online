@@ -78,6 +78,16 @@ footer{
     transition: all 0.2s;
 }
 
+#online{
+    font: 500 1.2rem Roboto;
+    color: #89373d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
 @media screen and (max-width: 767px) {
     #username-input{
         font-size: .5rem;
@@ -114,7 +124,6 @@ footer{
         height: 1.8rem;
     }
 }
-
 
 /* Faz a div cair de cima */
 @keyframes aparecer{

@@ -18,9 +18,13 @@ app.set('views', path.join(__dirname, './public')) // set views directory
 app.use('/', routes) // use routes
 
 const messages = [] // array to store messages
+var online = -1 // number of users online, -1 because not count first user
 
 io.on('connection', (socket) =>{
     console.log('a user connected: ' + socket.id) // log when user connects
+    online++ // increment number of users online
+
+    io.emit('online', online)
 
     socket.emit('userConnected', messages) // send previous messages to user
 
@@ -32,6 +36,7 @@ io.on('connection', (socket) =>{
 
     socket.on('disconnect', () => { 
         console.log('user disconnected: ' + socket.id)
+        online -= 1
     })
 })
 
