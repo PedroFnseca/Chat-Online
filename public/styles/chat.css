@@ -105,3 +105,25 @@ li{
 img{
     width: 20%;
 }
+
+@media screen and (max-width: 767px) {
+
+    .message-content{
+        font-size: 8rem;
+    }
+
+    .message-username{
+        font-size: 8.5rem;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    .message-content{
+        font-size: 10rem;
+    }
+
+    .message-username{
+        font-size: 9.5rem;
+    }
+}
