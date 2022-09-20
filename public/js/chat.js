@@ -13,46 +13,50 @@ if (!userName){
 }
 
 form.addEventListener('submit', (e) =>{
-  e.preventDefault();
-  if (input.value) {
+    e.preventDefault();
+    if (input.value) {
 
-    const date = new Date()
-    var minutes = date.getMinutes()
-    var hours = date.getHours()
+        const date = new Date()
+        var minutes = date.getMinutes()
+        var hours = date.getHours()
 
-    if (minutes.toString().length == 1){
-      minutes = `0${minutes}`
+        if (minutes.toString().length == 1){
+            minutes = `0${minutes}`
+        }
+        const time = `${hours}:${minutes}` 
+
+        data = {
+            username: userName,
+            message: input.value,
+            time: time
+        }
+
+        socket.emit('chatMessage', data)
+        input.value = '';
     }
-    const time = `${hours}:${minutes}` 
-
-    data = {
-      username: userName,
-      message: input.value,
-      time: time
-    }
-
-    socket.emit('chatMessage', data)
-    input.value = '';
-  }
 })
 
 socket.on('chatMessage', (message) => {
-  var li = document.createElement('li')
-  li.classList.add('message')
-  li.innerHTML = `<span class="message-username">${message.username}</span><div class="mensagem">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div>`
-  messagesContainer.appendChild(li)
+    var li = document.createElement('li')
+    li.classList.add('message')
 
-  scroll.scrollTop = scroll.scrollHeight
+    li.innerHTML = `<span class="message-username">${message.username}</span><div class="mensagem">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div>`
+
+    messagesContainer.appendChild(li)
+
+    scroll.scrollTop = scroll.scrollHeight
 })
 
 socket.on('userConnected', (messages) =>{
-  messagesContainer.innerHTML = ''
-  messages.forEach(message => {
+    messagesContainer.innerHTML = ''
+    messages.forEach(message => {
     var li = document.createElement('li')
     li.classList.add('message')
-    li.innerHTML = `<span class="message-username">${message.username}</span><div class="mensagem">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div>`
-    messagesContainer.appendChild(li)
-  })
 
-  scroll.scrollTop = scroll.scrollHeight
+    li.innerHTML = `<span class="message-username">${message.username}</span><div class="mensagem">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div>`
+
+    messagesContainer.appendChild(li)
+    })
+
+    scroll.scrollTop = scroll.scrollHeight
 })
