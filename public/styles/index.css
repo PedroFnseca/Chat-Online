@@ -12,7 +12,28 @@ footer{
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 99%;
+}
+
+footer p{
+    margin: 0;
+    padding: .5rem;
+
+    /* efeito de vidro */
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0 0;
+}
+
+footer a{
+    color: #89373d;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+footer a:hover{
+    color: #fff;
+    transition: all .2s;
 }
 
 .index-container{
@@ -74,7 +95,7 @@ footer{
 }
 
 #ok-btn:hover{
-    background-color: #000;
+    background-color: #0c1822;
     transition: all 0.2s;
 }
 
