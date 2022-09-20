@@ -8,10 +8,11 @@ body{
             /* Efeito de vidro */
     background-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    border-radius: 20px 0;
+    border-radius: 0px 20px 20px 20px;
 
     width: fit-content;
     margin-bottom: 1.5rem;
+    margin-left: 10px;
 
     padding: 1rem;
     min-width: 10%;
@@ -19,6 +20,12 @@ body{
     word-wrap: break-word;
 
     animation: aparecer .5s;
+    transition: all .2s;
+}
+
+.mensagem:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all .2s;
 }
 
 .message-username{
