@@ -44,7 +44,7 @@ footer a:hover{
     height: 85vh;
 
     font-family: 'Roboto', sans-serif;
-    animation: aparecer .8s;
+    animation: surgirCima .8s normal;
 }
 
 #message-container{
@@ -146,7 +146,7 @@ footer a:hover{
 }
 
 /* Faz a div cair de cima */
-@keyframes aparecer{
+@keyframes surgirCima{
     from{
         opacity: 0;
         transform: translateY(-100%);

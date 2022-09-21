@@ -111,10 +111,10 @@ li{
             /* Efeito de vidro */
     background-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    
+
     border-radius: 8px;
 
-    animation: aparecerMeio .5s;
+    animation: surgir-meio .5s;
 }
 
 .scrollBar::-webkit-scrollbar{
@@ -165,7 +165,7 @@ li{
 }
 
 /* Faz a caixa de mensagem surgir do meio ampliando */
-@keyframes aparecerMeio{
+@keyframes surgir-meio{
     from{
         opacity: 0;
         transform: scale(0);
