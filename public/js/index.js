@@ -1,12 +1,12 @@
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
+var socket = io()
 const usernameInput = document.getElementById('username-input')
 const form = document.querySelector('form')
 const okBtn = document.getElementById('ok-btn')
 const spanOnline = document.getElementById('online')
-var socket = io()
+const alertArea = document.getElementsByClassName()
 
 socket.on('online', (online) => {
     spanOnline.innerHTML = `${online} online`
