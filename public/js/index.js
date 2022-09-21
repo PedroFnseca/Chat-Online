@@ -6,7 +6,6 @@ const usernameInput = document.getElementById('username-input')
 const form = document.querySelector('form')
 const okBtn = document.getElementById('ok-btn')
 const spanOnline = document.getElementById('online')
-const alertArea = document.getElementsByClassName()
 
 socket.on('online', (online) => {
     spanOnline.innerHTML = `${online} online`
