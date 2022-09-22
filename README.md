@@ -38,7 +38,7 @@
 
 # Quer testar? 🚀
 
-#### [Clique aqui](https://nuntius-websocket.herokuapp.com/) para acessar o chat.
+#### [Clique aqui](https://nuntius-msg.herokuapp.com/) para acessar o chat.
 
 <br>
 
