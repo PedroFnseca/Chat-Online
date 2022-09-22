@@ -2,17 +2,18 @@
 
 body{
     background-color: #142433;
+    padding: 0;
+    margin: 0;
 }
+
 
 footer{
     font: 900 1.5rem Roboto;
-    padding: 0;
-    margin: 0;
     color: #ffff;
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 99%;
+    width: 100vw;
 }
 
 footer p{
@@ -158,7 +159,7 @@ footer a:hover{
     }
 
     #username-input{
-        font-size: 1rem;
+        font-size: 1.5rem;
         width: 50%;
     }
 
@@ -173,6 +174,10 @@ footer a:hover{
 
     #username-input{
         height: 1.8rem;
+    }
+
+    #online{
+        font-size: 1.5rem;
     }
 }
 
