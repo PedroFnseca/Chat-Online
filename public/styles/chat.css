@@ -158,6 +158,8 @@ img{
     border-radius: 5px !important;
 }
 
+/* Animações */
+
 /* faz a mensagem aparecer lentamente */
 @keyframes aparecer{
     from{
