@@ -14,6 +14,7 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100vw;
+    animation: normal surgirBaixo .5s;
 }
 
 footer p{
@@ -87,7 +88,7 @@ footer a:hover{
     height: 85vh;
 
     font-family: 'Roboto', sans-serif;
-    /* animation: surgirCima .8s normal; */
+    animation: surgir 1.2s normal;
 }
 
 #message-container{
@@ -142,13 +143,13 @@ footer a:hover{
 }
 
 #online{
-    font: 500 1.2rem Roboto;
-    color: #89373d;
+    font: 500 2rem Roboto;
+    color: green;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
+    margin: 1rem; 
 }
 
 @media screen and (max-width: 767px){
@@ -182,10 +183,22 @@ footer a:hover{
 }
 
 /* Faz a div cair de cima */
-@keyframes surgirCima{
+@keyframes surgir{
     from{
         opacity: 0;
+        scale: 0;
         transform: translateY(-100%);
+    } to{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes surgirBaixo{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
     } to{
         opacity: 1;
         transform: translateY(0);
