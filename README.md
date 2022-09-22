@@ -15,13 +15,9 @@
 
 ####  É uma tecnologia que permite a comunicação entre um cliente e um servidor, permitindo que os dados sejam enviados e recebidos em tempo real.
 
-<!-- Imagem websocket -->
-
-<br>
-
-# socket.io 📡
-
-#### O socket.io é uma biblioteca que permite a comunicação em tempo real entre o cliente e o servidor, ele é baseado no WebSocket, mas também funciona em outros protocolos como o Flash Socket e o AJAX Long Polling.
+<p align="center"> 
+  <img src="https://user-images.githubusercontent.com/97262778/191837083-850ccc0c-7b23-4446-be0b-900405a720e0.png" width="60%"/> 
+</p>
 
 <br>
 
