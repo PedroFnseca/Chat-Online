@@ -30,6 +30,9 @@
 | Salas públicas | ✅ |
 | Salas com senha | ❌ |
 | Animações de digitação | ❌ |
+| Banco de dados MongoDB | ❌ |
+| upload de arquivos | ❌ |
+| Emojis | ❌ |
 
 <br>
 
