@@ -149,8 +149,9 @@ li{
 }
 
 img{
-    width: 22rem !important;; 
-    border-radius: 5px;
+    width: 20rem !important;
+    height: 20rem !important;
+    border-radius: 5px !important;
 }
 
 /* faz a mensagem aparecer lentamente */
