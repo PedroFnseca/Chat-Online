@@ -27,7 +27,7 @@
 | --- | --- |
 | Salas de conversa | ❌ |
 | Salas privadas | ❌ |
-| Salas públicas | ❌ |
+| Salas públicas | ✅ |
 | Salas com senha | ❌ |
 | Animações de digitação | ❌ |
 
