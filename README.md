@@ -25,11 +25,8 @@
 
 | Funcionalidades | Status |
 | --- | --- |
-| Salas de conversa | ❌ |
-| Salas privadas | ❌ |
+| Salas de conversa | ✅ |
 | Salas públicas | ✅ |
-| Salas com senha | ❌ |
-| Animações de digitação | ❌ |
 | Banco de dados MongoDB | ❌ |
 | upload de arquivos | ❌ |
 | Emojis | ❌ |
