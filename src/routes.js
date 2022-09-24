@@ -9,11 +9,7 @@ Router.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-Router.get('/chat', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/chat.html')
-})
-
-Router.get('/chat/:room', (req, res) => {
+Router.get('/:room', (req, res) => {
     res.sendFile(__dirname + '/public/pages/chat.html')
 })
 

@@ -4,13 +4,9 @@ var form = document.getElementById('form-message')
 var input = document.getElementById('message-input')
 var messagesContainer = document.getElementById('messages-container')
 var userName = localStorage.getItem('username')
+var id = localStorage.getItem('id')
 var scroll = document.querySelector('.scrollBar')
-var room = window.location.pathname.split('/')[2]
-
-if(room == '') {
-    room = 'general'
-}
-
+var room = window.location.pathname.split('/')[1]
 input.focus()
 
 if (!userName){
@@ -34,7 +30,8 @@ form.addEventListener('submit', (e) =>{
             username: userName,
             message: input.value,
             time: time,
-            room: room
+            room: room,
+            id: id
         }
 
         socket.emit('chatMessage', data)
@@ -48,8 +45,13 @@ socket.emit('userConnected', room)
 socket.on('chatMessage', (message) => {
     var li = document.createElement('li')
     li.classList.add('message')
+    console.log(message)
 
-    li.innerHTML = `<span class="message-username">${message.username}</span><div class="mensagem">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div>`
+    if(message.id == id){
+        li.innerHTML = `<div class="my-message"><div class="minhas-mensagens"><span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+    }else{
+        li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+    }
 
     messagesContainer.appendChild(li)
 
@@ -62,7 +64,11 @@ socket.on('userConnected', (messages) =>{
     var li = document.createElement('li')
     li.classList.add('message')
 
-    li.innerHTML = `<span class="message-username">${message.username}</span><div class="mensagem">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div>`
+    if(message.id == id){
+        li.innerHTML = `<div class="my-message"><div class="minhas-mensagens"><span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+    }else{
+        li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+    }
 
     messagesContainer.appendChild(li)
     })

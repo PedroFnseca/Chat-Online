@@ -10,7 +10,7 @@ body{
     background-color: #142433;
 }
 
-.mensagem{
+.outras-mensagens{
             /* Efeito de vidro */
     background-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -29,7 +29,26 @@ body{
     transition: all .2s;
 }
 
-.mensagem:hover{
+.minhas-mensagens{
+        /* Efeito de vidro */
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 20px;
+
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    margin-left: 10px;
+
+    padding: 1rem;
+    min-width: 10%;
+    max-width: 60%;
+    word-wrap: break-word;
+
+    animation: aparecerDireita .2s;
+    transition: all .2s;
+}
+
+.mensagem:hover, .minhas-mensagens:hover{
     background-color: rgba(255, 255, 255, 0.1);
     transition: all .2s;
 }
@@ -69,7 +88,18 @@ ul{
 li{
     margin: 0.5rem;
     word-wrap: break-word;
-    animation: aparecerEsquerda .2s;
+}
+
+.my-message{
+    /* Deixa os Elementos na direita */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.other-message{
+    /* Deixa os Elementos na esquerda */
+    display: flex;
+    justify-content: flex-start;
 }
 
 #form-message{
@@ -130,6 +160,7 @@ li{
 
     animation: surgir-meio .5s;
     margin: .5rem;
+    overflow-x: hidden;
 }
 
 .scrollBar::-webkit-scrollbar{
@@ -175,6 +206,18 @@ img{
     from{
         opacity: 0;
         transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Faz a mensagem surgir da direita */
+@keyframes aparecerDireita{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
     }
     to{
         opacity: 1;
