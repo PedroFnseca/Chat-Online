@@ -26,11 +26,8 @@ io.on('connection', (socket) =>{
     io.emit('online', online)
 
     socket.on('userConnected', (room) => {
-        socket.join(room)
-
+        socket.join(room) // join room
         const previousMessages = messages.filter(message => message.room == room)
-        console.log(previousMessages)
-
         socket.emit('userConnected', previousMessages)
         console.log('user connected to room: ' + room)
     })
@@ -39,7 +36,6 @@ io.on('connection', (socket) =>{
     socket.on('chatMessage', data => {
         io.to(data.room).emit('chatMessage', data) // send message to all users in room
         messages.push(data) // add message to array
-        console.log(data)
     })
 
     socket.on('disconnect', () => { 
