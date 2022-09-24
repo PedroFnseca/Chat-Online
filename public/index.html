@@ -11,17 +11,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
 </head>
 <body>
-
-    <!-- <div class="alertContainer">
-        <div class="alert alert-close">
-            <div id="triangulo"></div>
-            <div id="message-alert">
-                Nome obrigatório!
-            </div>
-        </div>
-    </div> -->
-    
-
     <div class="index-container">
         <div id="message-container">
             <h1>Nuntius</h1>
@@ -29,13 +18,25 @@
         </div>
         <div>
             <form action="/pages/chat.html" id="form-container">
-                <input 
-                type="text" 
-                name="username" 
-                id="username-input" 
-                placeholder="Usuário"
-                autocomplete="off">
-                <button type="submit" id="ok-btn">Entrar</button>
+
+                <div class="input-container">
+                    <input 
+                    type="text" 
+                    name="username" 
+                    id="username-input" 
+                    placeholder="Usuário"
+                    autocomplete="off">
+                    <input
+                    type="text"
+                    name="room"
+                    id="room-input"
+                    placeholder="Sala"
+                    autocomplete="off">
+                </div>
+                
+                <div class="button-container">
+                    <button type="submit" id="ok-btn">Entrar</button>
+                </div>
             </form>
             <span id="online"></span>
         </div>

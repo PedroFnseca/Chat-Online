@@ -5,6 +5,11 @@ var input = document.getElementById('message-input')
 var messagesContainer = document.getElementById('messages-container')
 var userName = localStorage.getItem('username')
 var scroll = document.querySelector('.scrollBar')
+var room = window.location.pathname.split('/')[2]
+
+if(room == '') {
+    room = 'general'
+}
 
 input.focus()
 
@@ -28,13 +33,17 @@ form.addEventListener('submit', (e) =>{
         data = {
             username: userName,
             message: input.value,
-            time: time
+            time: time,
+            room: room
         }
 
         socket.emit('chatMessage', data)
         input.value = '';
     }
 })
+
+// Entra na sala
+socket.emit('userConnected', room)
 
 socket.on('chatMessage', (message) => {
     var li = document.createElement('li')

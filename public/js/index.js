@@ -6,6 +6,7 @@ const usernameInput = document.getElementById('username-input')
 const form = document.querySelector('form')
 const okBtn = document.getElementById('ok-btn')
 const spanOnline = document.getElementById('online')
+const room = document.getElementById('room-input')
 
 socket.on('online', (online) => {
     spanOnline.innerHTML = `${online} online`
@@ -18,7 +19,7 @@ form.addEventListener('submit', (e) => {
     if (usernameInput.value) {
         const username = capitalizeFirstLetter(usernameInput.value)
         localStorage.setItem('username', username)
-        window.location.href = '/chat'
+        window.location.href = `/chat/${room.value}`
     } else{
         alert('Digite um nome de usuário!')
     }

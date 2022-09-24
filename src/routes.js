@@ -13,4 +13,8 @@ Router.get('/chat', (req, res) => {
     res.sendFile(__dirname + '/public/pages/chat.html')
 })
 
+Router.get('/chat/:room', (req, res) => {
+    res.sendFile(__dirname + '/public/pages/chat.html')
+})
+
 export default Router

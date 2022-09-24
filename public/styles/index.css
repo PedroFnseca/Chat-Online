@@ -8,6 +8,7 @@
 
 body{
     background-color: #142433;
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
@@ -44,48 +45,6 @@ footer a:hover{
     transition: all .2s;
 }
 
-.alert{
-    width: fit-content;
-    font: 900 1.5rem Roboto;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.alert:hover #message-alert{
-    background-color: #0c1822;
-    transition: all .2s;
-}
-.alert:hover  #triangulo{
-    border-bottom: 15px solid #0c1822;
-    transition: all .2s;
-}
-
-.alert-close{
-    animation: normal fecharAlert .3s;
-}
-
-.alert-open{
-    animation: surgirAlert normal .3s;
-}
-
-#triangulo{
-    width: 0px; 
-    height: 0; 
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #89373d;
-    margin: auto;
-    transition: all .2s;
-}
-
-#message-alert{
-    padding: 1rem;
-    border-radius: 1rem;
-    color: #fff;
-    background-color: #89373d;
-    transition: all .2s;
-}
-
 .index-container{
     display: flex;
     flex-direction: column;
@@ -99,7 +58,7 @@ footer a:hover{
 
 #message-container{
     font: 500 1.2rem Roboto;
-    margin-bottom: 100px;
+    margin-bottom: 1rem;
     text-align: center;
     color: #fff;
 }
@@ -113,27 +72,40 @@ footer a:hover{
     justify-content: space-between;
     padding: 1rem;
     border-radius: 10px;
+}
 
-                /* Efeito de vidro */
+.input-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 1.5rem;
+
+        /* Efeito de vidro */
     background-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
 }
 
-#username-input{
-    width: 65%;
-    height: 2.8rem;
+#username-input, #room-input{
+    width: 45%;
     border-radius: 0.5rem;
     border: 0;
-    padding: 0 1.5rem;
+    padding: .5rem;
     background-color: #fff;
     color: #29292e;
-    text-transform: capitalize;
     font-size: 1.5rem;
     margin: auto;
 }
 
+.button-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
 #ok-btn{
+    width: 20%;
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -168,9 +140,9 @@ footer a:hover{
         padding: 1rem;
     }
 
-    #username-input{
+    #username-input, #room-input{
         font-size: 1.5rem;
-        width: 50%;
+        width: 35%;
     }
 
     #form-container{
@@ -178,12 +150,8 @@ footer a:hover{
     }
 
     #ok-btn{
-        padding: 0 .5rem;
+        padding: .5rem;
         font-size: 1rem;
-    }
-
-    #username-input{
-        height: 1.8rem;
     }
 
     #online{
@@ -196,13 +164,14 @@ footer a:hover{
         padding: .5rem;
     }
 
-    #username-input{
+    #username-input, #room-input{
         font-size: 1rem;
-        width: 40%;
+        width: 30%;
     }
 
     #ok-btn{
-        padding: 0 .5rem;
+        width: fit-content;
+        padding: .5rem;
         font-size: .8rem;
     }
 } 
@@ -240,26 +209,5 @@ footer a:hover{
     } to{
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes surgirAlert{
-    from{
-        opacity: 0;
-        transform: translateY(-100%);
-    } to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fecharAlert {
-    from{
-        opacity: 1;
-        transform: translateY(0);
-    } to {
-        opacity: 0;
-        transform: translateY(-100%);
-        display: none;
     }
 }

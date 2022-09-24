@@ -2,14 +2,13 @@ import express from 'express'
 import path from 'path'
 import http from 'http'
 import { Server } from 'socket.io'
-import { config } from 'dotenv'
 import routes from './routes.js'
 
-config() // load .env file
 const app = express() // create express app
 const server = http.createServer(app) // create http server
 const __dirname = path.resolve() // get current directory
 const io = new Server(server) // create socket.io server
+
 const PORT = process.env.PORT || 4444 // get port from .env file or use 3000
 
 app.use(express.static(path.join(__dirname, './public'))) // serve static files
@@ -26,12 +25,21 @@ io.on('connection', (socket) =>{
 
     io.emit('online', online)
 
-    socket.emit('userConnected', messages) // send previous messages to user
+    socket.on('userConnected', (room) => {
+        socket.join(room)
+
+        const previousMessages = messages.filter(message => message.room == room)
+        console.log(previousMessages)
+
+        socket.emit('userConnected', previousMessages)
+        console.log('user connected to room: ' + room)
+    })
 
     // send message to all users
     socket.on('chatMessage', data => {
-        io.emit('chatMessage', data)
+        io.to(data.room).emit('chatMessage', data) // send message to all users in room
         messages.push(data) // add message to array
+        console.log(data)
     })
 
     socket.on('disconnect', () => { 
