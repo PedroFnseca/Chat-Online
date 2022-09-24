@@ -17,4 +17,8 @@ Router.get('/chat/:room', (req, res) => {
     res.sendFile(__dirname + '/public/pages/chat.html')
 })
 
+Router.use('*', (req, res) => {
+    res.sendFile(__dirname + '/public/pages/notFound.html')
+})
+
 export default Router

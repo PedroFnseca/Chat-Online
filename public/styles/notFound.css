@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    max-width: 100% !important;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #142433;
+}
+
+.notFound-container{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    width: 50vw;
+    text-align: center;
+    padding: 2rem;
+    color: #ffff;
+
+    /* Efeito de vidro */
+    background-color: #142433;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: all .2s;
+}
+
+.notFound-container:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: all .2s;
+}
+
+.notFound-container h1{
+    font: 900 3rem Roboto;
+    margin-bottom: 1rem;
+}
+
+a{
+    color: #89373d;
+    text-decoration: none;
+    transition: all .2s;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: #fff;
+    transition: all .2s;
+}
+
+.link{
+    margin-top: 1rem;
+}
