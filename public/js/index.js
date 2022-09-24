@@ -35,7 +35,7 @@ form.addEventListener('submit', (e) => {
         }
 
         if(room.value == '') {
-            window.location.href = '/general'
+            window.location.href = '/geral'
         } else{
             window.location.href = `/${room.value}`
         }
