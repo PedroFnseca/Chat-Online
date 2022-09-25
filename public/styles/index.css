@@ -135,6 +135,42 @@ input:focus{
     margin: 1rem; 
 }
 
+/* Animações */
+
+/* Faz a div cair de cima */
+@keyframes surgir{
+    from{
+        opacity: 0;
+        scale: 0;
+        transform: translateY(-100%);
+    } to{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Faz a cor da letra pulsar */
+@keyframes pulsar{
+    0%{
+        color: #0c1822;
+    } 50%{
+        color: #89373d;
+    } 100%{
+        color: #0c1822;
+    }
+}
+
+@keyframes surgirBaixo{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Media screen para responsividade */
 
 @media screen and (max-width: 800px){
@@ -177,41 +213,5 @@ input:focus{
         width: fit-content;
         padding: .5rem;
         font-size: .8rem;
-    }
-} 
-
-/* Animações */
-
-/* Faz a div cair de cima */
-@keyframes surgir{
-    from{
-        opacity: 0;
-        scale: 0;
-        transform: translateY(-100%);
-    } to{
-        opacity: 1;
-        scale: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Faz a cor da letra pulsar */
-@keyframes pulsar{
-    0%{
-        color: #0c1822;
-    } 50%{
-        color: #89373d;
-    } 100%{
-        color: #0c1822;
-    }
-}
-
-@keyframes surgirBaixo{
-    from{
-        opacity: 0;
-        transform: translateY(100%);
-    } to{
-        opacity: 1;
-        transform: translateY(0);
     }
 }
