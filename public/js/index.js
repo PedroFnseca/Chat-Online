@@ -38,6 +38,8 @@ window.onload = () => {
     
             if(room.value == '') {
                 window.location.href = '/geral'
+            } else if (room.value.split(' ').length > 1) {
+                alert('Não é permitido espaços no nome da sala')
             } else{
                 window.location.href = `/${room.value}`
             }
