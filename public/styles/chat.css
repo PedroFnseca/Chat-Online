@@ -21,7 +21,7 @@ body{
 
     padding: 1rem;
     min-width: 10%;
-    max-width: 60%;
+    max-width: 80% !important;
     word-wrap: break-word;
 
     transition: all .2s;
@@ -110,12 +110,20 @@ li{
     border-radius: 8px;
 }
 
+form{
+    margin: 0 auto;
+}
+
 #form-message input{
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem;
     width: 85%;
     font: 400 1.2rem Roboto;
+}
+
+#form-message input:focus{
+    outline: none;
 }
 
 #form-message button{
@@ -223,5 +231,52 @@ img{
     to{
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Media screen para responsividade */
+@media screen and (max-width: 800px){
+    .scrollBar{
+        height: 80vh;
+    }
+
+    .message-content{
+        font: 600 1.5rem Roboto;
+    }
+
+    .message-username{
+        font: 800 2rem Roboto;
+    }
+
+    .message-time{
+        font: 600 1.5rem Roboto;
+    }
+
+    #form-message{
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    #form-message input{
+        width: 75%;
+        font-size: 1.5rem;
+    }
+
+    #form-message button{
+        font-size: 1.5rem;
+    }
+
+    .minhas-mensagens, .outras-mensagens{
+        min-width: 30%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #form-message{
+        width: 80%;
+    }
+
+    #form-message input{
+        width: 65%;
     }
 }
