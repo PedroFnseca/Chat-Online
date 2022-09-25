@@ -158,6 +158,7 @@ form{
     animation: surgir-meio .5s;
     margin: .5rem;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .scrollBar::-webkit-scrollbar{
