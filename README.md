@@ -41,4 +41,4 @@
 
 # Sujestões? 🤔
 
-#### Se você tiver alguma sugestão de melhoria ou correção, por favor, abra uma issue [aqui](https://github.com/pedroFnseca/Nuntius-WebSocket/issues) 🚀
+#### Se você tiver alguma sugestão de melhoria ou correção, por favor, abra uma issue [aqui](https://github.com/pedroFnseca/Nuntius-WebSocket/issues/new/choose) 🚀
