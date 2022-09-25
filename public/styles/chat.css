@@ -10,11 +10,10 @@ body{
     background-color: #142433;
 }
 
-.outras-mensagens{
+.outras-mensagens, .minhas-mensagens{
             /* Efeito de vidro */
     background-color: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    border-radius: 0px 20px 20px 20px;
 
     width: fit-content;
     margin-bottom: 1.5rem;
@@ -25,27 +24,17 @@ body{
     max-width: 60%;
     word-wrap: break-word;
 
-    animation: aparecerEsquerda .2s;
     transition: all .2s;
 }
 
+.outras-mensagens{
+    border-radius: 0px 20px 20px 20px;
+    animation: aparecerEsquerda .2s;
+}
+
 .minhas-mensagens{
-        /* Efeito de vidro */
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    border-radius: 20px 20px 0px 20px;
-
-    width: fit-content;
-    margin-bottom: 1.5rem;
-    margin-left: 10px;
-
-    padding: 1rem;
-    min-width: 10%;
-    max-width: 60%;
-    word-wrap: break-word;
-
+    border-radius: 20px 0px 20px 20px;
     animation: aparecerDireita .2s;
-    transition: all .2s;
 }
 
 .outras-mensagens:hover, .minhas-mensagens:hover{
