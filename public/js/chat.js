@@ -8,6 +8,7 @@ window.onload = () => {
     var id = localStorage.getItem('id')
     var scroll = document.querySelector('.scrollBar')
     var room = window.location.pathname.split('/')[1]
+    var idUserLastMessage = ''
     input.focus()
     
     if (!userName){
@@ -50,9 +51,18 @@ window.onload = () => {
         if(message.id == id){
             li.innerHTML = `<div class="my-message"><div class="minhas-mensagens"><span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
         }else{
-            li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+
+            if(message.id == idUserLastMessage){
+                li.innerHTML = `<div class="others-message"></span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+                console.log('aqui')
+            } else{
+                li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+            }
         }
     
+        idUserLastMessage = message.id
+        console.log('ultimo id: ' + idUserLastMessage)
+
         messagesContainer.appendChild(li)
     
         scroll.scrollTop = scroll.scrollHeight
@@ -61,15 +71,25 @@ window.onload = () => {
     socket.on('userConnected', (messages) =>{
         messagesContainer.innerHTML = ''
         messages.forEach(message => {
+
         var li = document.createElement('li')
         li.classList.add('message')
     
         if(message.id == id){
             li.innerHTML = `<div class="my-message"><div class="minhas-mensagens"><span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
         }else{
-            li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+
+            if(message.id == idUserLastMessage){
+                li.innerHTML = `<div class="others-message"></span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
+                console.log('aqui')
+            } else{
+                li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
         }
-    
+    }
+
+        idUserLastMessage = message.id
+        console.log('ultimo id: ' + idUserLastMessage)
+
         messagesContainer.appendChild(li)
         })
     
