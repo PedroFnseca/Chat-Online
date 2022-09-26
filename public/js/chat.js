@@ -52,16 +52,15 @@ window.onload = () => {
             li.innerHTML = `<div class="my-message"><div class="minhas-mensagens"><span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
         }else{
 
+            // Verifica se é nescessario esconder o nome
             if(message.id == idUserLastMessage){
                 li.innerHTML = `<div class="others-message"></span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
-                console.log('aqui')
             } else{
                 li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
             }
         }
     
         idUserLastMessage = message.id
-        console.log('ultimo id: ' + idUserLastMessage)
 
         messagesContainer.appendChild(li)
     
@@ -79,16 +78,15 @@ window.onload = () => {
             li.innerHTML = `<div class="my-message"><div class="minhas-mensagens"><span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
         }else{
 
+            // Verifica se é nescessario esconder o nome
             if(message.id == idUserLastMessage){
                 li.innerHTML = `<div class="others-message"></span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
-                console.log('aqui')
             } else{
                 li.innerHTML = `<div class="others-message"><span class="message-username">${message.username}</span><div class="outras-mensagens">  <span class="message-content">${message.message}</span> <span class="message-time">${message.time}</span></div></div>`
         }
     }
 
         idUserLastMessage = message.id
-        console.log('ultimo id: ' + idUserLastMessage)
 
         messagesContainer.appendChild(li)
         })
