@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #142433;
+    background-color: #1e1e2c;
 }
 
 .outras-mensagens, .minhas-mensagens{
@@ -31,7 +31,7 @@ body{
 }
 
 .minhas-mensagens{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #4995BE;
     border-radius: 20px 0px 20px 20px;
     transition: all .2s;
     animation: aparecerDireita .2s;
@@ -44,7 +44,7 @@ body{
 
 .message-username{
     font: 800 2rem Roboto;
-    color: #f04608;
+    color: #4995BE;
     text-align: center;
 }
 
@@ -62,7 +62,7 @@ body{
 }
 
 .message-time{
-    color: #00aaff9c;
+    color: #E6E9EF;
     font: 600 1rem Roboto;
     display: flex;
     justify-content: flex-end;
@@ -92,21 +92,13 @@ li{
 }
 
 #form-message{
-    border-radius: 0.5rem;
-    padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     row-gap: 2vh;
     align-content: center;
     justify-content: space-between;
     padding: .8rem;
-    margin: 2rem 2rem 0 2rem;
     margin-top: 1rem;
-
-                    /* Efeito de vidro */
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-
     border-radius: 8px;
 }
 
@@ -120,17 +112,22 @@ form{
     padding: 0.5rem;
     width: 85%;
     font: 400 1.2rem Roboto;
+    background-color: #00000077;
+    color: #E6E9EF;
 }
 
 #form-message input:focus{
     outline: none;
 }
 
+#form-message input::placeholder{
+    color: #818181;
+}
+
 #form-message button{
     border: none;
     border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: #89373d;
+    background-color: #00000077;
     font: 500 1rem Roboto;
     color: #fff;
     font-size: 20px;
@@ -138,25 +135,22 @@ form{
 }
 
 #form-message button:hover{
-    background-color: #00000077;
+    background-color: #58585877;
     transition: all 0.2s;
 }
 
 .scrollBar{
     border-radius: 10px;
-    padding: 0.5rem;
     overflow-y: scroll;
     height: 80vh;
-    margin: 0 auto;
+    padding: .5rem;
 
             /* Efeito de vidro */
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-
-    border-radius: 8px;
+    background-color: #00000077;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); 
 
     animation: surgir-meio .5s;
-    margin: .5rem;
+    margin: 1rem;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -180,6 +174,15 @@ form{
     background-color: #000000;
     transition: all 0.5s;
 }
+
+#img-send{
+    width: 30px !important;
+    height: 30px !important;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
 
 img{
     width: 20rem !important;

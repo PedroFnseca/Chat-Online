@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #142433;
+    background-color: #1e1e2c;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
@@ -34,7 +34,7 @@ footer p{
 }
 
 footer a{
-    color: #89373d;
+    color: #4995BE;
     text-decoration: none;
     transition: all .2s;
 }
@@ -76,14 +76,18 @@ footer a:hover{
 
 .input-container{
     width: 100%;
-    margin: 0 auto;
     display: flex;
-    padding: 1rem;
+    justify-content: space-between;
+    border-radius: 8px; 
+}
 
-        /* Efeito de vidro */
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+.input-container input{
+    background-color: #00000077 !important;
+    color: #fff !important;
+}
+
+.input-container input::placeholder {
+    color: #818181;
 }
 
 input:focus{
@@ -91,37 +95,32 @@ input:focus{
 }
 
 #username-input, #room-input{
-    width: 45%;
+    width: 40%;
     border-radius: 0.5rem;
     border: 0;
     padding: .5rem;
     background-color: #fff;
     color: #29292e;
     font-size: 1.5rem;
-    margin: auto;
-}
-
-.button-container{
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
 }
 
 #ok-btn{
-    width: 20%;
     border: none;
     border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: #89373d;
+    display: flex;
+    background-color: #4995BE;
     font: 500 1rem Roboto;
-    color: #fff;
     font-size: 20px;
     transition: all 0.2s;
+    padding: 10px;
+}
+
+button img{
+    width: 30px !important;
 }
 
 #ok-btn:hover{
-    background-color: #0c1822;
+    background-color: #58585877;
     transition: all 0.2s;
 }
 
@@ -155,7 +154,7 @@ input:focus{
     0%{
         color: #0c1822;
     } 50%{
-        color: #89373d;
+        color: #4995BE;
     } 100%{
         color: #0c1822;
     }
@@ -176,22 +175,13 @@ input:focus{
 @media screen and (max-width: 800px){
 
     #form-container{
-        width: 100%;
+        width: 80%;
         padding: 1rem;
     }
 
     #username-input, #room-input{
         font-size: 1.5rem;
         width: 35%;
-    }
-
-    #form-container{
-        width: 80%;
-    }
-
-    #ok-btn{
-        padding: .5rem;
-        font-size: 1rem;
     }
 
     #online{
@@ -207,11 +197,5 @@ input:focus{
     #username-input, #room-input{
         font-size: 1rem;
         width: 30%;
-    }
-
-    #ok-btn{
-        width: fit-content;
-        padding: .5rem;
-        font-size: .8rem;
     }
 }
