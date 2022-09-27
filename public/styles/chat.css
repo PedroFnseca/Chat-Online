@@ -110,7 +110,7 @@ form{
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    width: 85%;
+    width: 90%;
     font: 400 1.2rem Roboto;
     background-color: #00000077;
     color: #E6E9EF;
@@ -214,7 +214,7 @@ img{
     }
 
     #form-message input{
-        width: 75%;
+        width: 85%;
         font-size: 1.5rem;
     }
 
@@ -233,7 +233,7 @@ img{
     }
 
     #form-message input{
-        width: 65%;
+        width: 75%;
     }
 }
 
