@@ -16,7 +16,7 @@
 ####  É uma tecnologia que permite a comunicação entre um cliente e um servidor, permitindo que os dados sejam enviados e recebidos em tempo real.
 
 <p align="center"> 
-  <img src="https://user-images.githubusercontent.com/97262778/194972205-94ec5ed0-8b7d-43f7-877c-53682cf17420.png" width="60%"/> 
+  <img src="https://user-images.githubusercontent.com/97262778/194972842-0423acca-dd3a-47e8-8978-d3f0202053cc.png" width="60%"/> 
 </p>
 
 <br>
@@ -42,3 +42,5 @@
 # Sujestões? 🤔
 
 #### Se você tiver alguma sugestão de melhoria ou correção, por favor, abra uma issue [aqui](https://github.com/pedroFnseca/Nuntius-WebSocket/issues/new/choose) 🚀
+
+
