@@ -16,7 +16,7 @@
 ####  É uma tecnologia que permite a comunicação entre um cliente e um servidor, permitindo que os dados sejam enviados e recebidos em tempo real.
 
 <p align="center"> 
-  <img src="https://user-images.githubusercontent.com/97262778/191837083-850ccc0c-7b23-4446-be0b-900405a720e0.png" width="60%"/> 
+  <img src="https://user-images.githubusercontent.com/97262778/194972205-94ec5ed0-8b7d-43f7-877c-53682cf17420.png" width="60%"/> 
 </p>
 
 <br>
