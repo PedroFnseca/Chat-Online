@@ -33,13 +33,38 @@
 
 <br>
 
+# Os segredos do projeto 🤫
+
+#### Um dos segredos desse projeto é que ele interpeta HTML quando você digita, ou seja, se você digitar ```<img src="link-imagem">``` ele vai renderizar a imagem no chat. Serve para qualquer tag HTML, como ```<h1>```, ```<p>``` e etc. Dá até para colocar um vídeo do YouTube, basta colocar o link do vídeo entre ```<iframe>``` e ```</iframe>```. Se divirta!
+ 
+<br>
+
+# Como usar? 🎮
+
+#### Ao entrar no [chat](https://nuntius-msg.herokuapp.com/), coloque o seu username (a sala é opcional). Pronto, agora você já pode conversar com outras pessoas que estão no chat.
+
+<p align="center">
+<!-- Imagem da home aqui -->
+</p>
+
+---
+
+#### Para enviar uma mensagem, basta digitar no campo de texto e apertar enter ou clicar no botão de enviar. Aproveite para testar as funcionalidades do chat, como enviar imagens, vídeos do YouTube e etc, tags HTML. Explore! 🌎 
+
+<p align="center">
+<!-- Imagem do chat aqui -->
+</p>
+
+<br>
+
+
 # Quer testar? 🚀
 
 #### [Clique aqui](https://nuntius-msg.herokuapp.com/) para acessar o chat.
 
 <br>
 
-# Sujestões? 🤔
+# Sujestões e melhorias 🤝
 
 #### Se você tiver alguma sugestão de melhoria ou correção, por favor, abra uma issue [aqui](https://github.com/pedroFnseca/Nuntius-WebSocket/issues/new/choose) 🚀
 
