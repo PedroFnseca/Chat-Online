@@ -9,11 +9,7 @@
 
 # O que é WebSocket? 🤔 
 
-#### É uma tecnlogia que permite comunicações bidirecionais através de canais full-duplex que permitem o envio e recebimento de dados.  
-
-#### O WebSocket é um protocolo de comunicação que funciona sobre o protocolo HTTP, ele é baseado em TCP e utiliza o protocolo de comunicação TCP/IP. 
-
-####  É uma tecnologia que permite a comunicação entre um cliente e um servidor, permitindo que os dados sejam enviados e recebidos em tempo real.
+#### O WebSocket é um protocolo de comunicação que funciona sobre o protocolo HTTP. Permite comunicações bidirecionais através de canais full-duplex permitindo que os dados sejam enviados e recebidos em tempo real. 
 
 <p align="center"> 
   <img src="https://user-images.githubusercontent.com/97262778/194972842-0423acca-dd3a-47e8-8978-d3f0202053cc.png" width="60%"/> 
