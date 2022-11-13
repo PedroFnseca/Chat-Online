@@ -174,7 +174,7 @@ form{
     transition: all 0.5s;
 }
 
-#img-send{
+#img-send, #img-emoji{
     width: 30px !important;
     height: 30px !important;
     display: flex;
@@ -182,6 +182,9 @@ form{
     padding: 8px;
 }
 
+#img-emoji{
+    display: none;
+}
 
 img{
     width: 20rem !important;
