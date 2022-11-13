@@ -13,5 +13,9 @@
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.1",
     "socket.io": "^4.5.2"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/index.js"
   }
 }
